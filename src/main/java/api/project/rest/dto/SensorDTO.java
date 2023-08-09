@@ -1,6 +1,7 @@
 package api.project.rest.dto;
 
-import javax.validation.constraints.NotEmpty;
+import org.hibernate.validator.constraints.NotEmpty;
+
 import javax.validation.constraints.Size;
 
 public class SensorDTO {
