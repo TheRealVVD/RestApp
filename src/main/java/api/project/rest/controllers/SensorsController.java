@@ -1,10 +1,13 @@
 package api.project.rest.controllers;
 
+import api.project.rest.config.ApplicationConfig;
 import api.project.rest.dto.SensorDTO;
+import api.project.rest.dto.SensorsResponce;
 import api.project.rest.models.Sensor;
 import api.project.rest.services.SensorService;
 import api.project.rest.util.MeasurementErrorResponse;
 import api.project.rest.util.MeasurementException;
+import api.project.rest.util.SensorNotFoundException;
 import api.project.rest.util.SensorValidator;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +17,8 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+
+import java.util.stream.Collectors;
 
 import static api.project.rest.util.ErrorsUtil.returnErrorsToClient;
 
@@ -47,7 +52,22 @@ public class SensorsController {
         return ResponseEntity.ok(HttpStatus.OK);
     }
 
+    @GetMapping
+    public SensorsResponce getSensors() {
+        return new SensorsResponce(sensorService.findAll().stream().map(this::convertToSensorDTO)
+                .collect(Collectors.toList()));
+    }
+
+    @GetMapping("/{id}")
+    public Sensor getSensorById(@PathVariable("id") int id) {
+        return sensorService.findById(id).orElseThrow(SensorNotFoundException::new);
+    }
+
     private Sensor convertToSensor(SensorDTO sensorDTO) {
         return modelMapper.map(sensorDTO, Sensor.class);
+    }
+
+    private SensorDTO convertToSensorDTO(Sensor sensor) {
+        return modelMapper.map(sensor, SensorDTO.class);
     }
 }

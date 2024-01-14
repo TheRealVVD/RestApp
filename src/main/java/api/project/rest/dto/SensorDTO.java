@@ -1,9 +1,17 @@
 package api.project.rest.dto;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.validation.constraints.Size;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class SensorDTO {
     @NotEmpty(message = "Название не должно быть пустым!")
     @Size(min = 3, max = 30, message = "Название сенсора должно быть от 3 до 30 символов!")
