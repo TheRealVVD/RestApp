@@ -16,4 +16,5 @@ public class MeasurementsResponse {
     public void setMeasurements(List<MeasurementDTO> measurements) {
         this.measurements = measurements;
     }
+
 }

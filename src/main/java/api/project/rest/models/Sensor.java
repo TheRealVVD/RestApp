@@ -10,7 +10,7 @@ import javax.persistence.*;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
 
-@Data //создает разные геттеры, сеттеры, хэш-коды
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder

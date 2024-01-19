@@ -1,12 +1,9 @@
 package api.project.rest.controllers;
 
-import api.project.rest.config.ApplicationConfig;
 import api.project.rest.dto.SensorDTO;
 import api.project.rest.dto.SensorsResponce;
 import api.project.rest.models.Sensor;
 import api.project.rest.services.SensorService;
-import api.project.rest.util.MeasurementErrorResponse;
-import api.project.rest.util.MeasurementException;
 import api.project.rest.util.SensorNotFoundException;
 import api.project.rest.util.SensorValidator;
 import org.modelmapper.ModelMapper;
@@ -17,7 +14,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-
 import java.util.stream.Collectors;
 
 import static api.project.rest.util.ErrorsUtil.returnErrorsToClient;

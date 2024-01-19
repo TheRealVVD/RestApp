@@ -2,15 +2,14 @@ package api.project.rest.repositories;
 
 import api.project.rest.IntegrationTestBase;
 import api.project.rest.models.Measurement;
-import org.hamcrest.MatcherAssert;
-import org.hamcrest.collection.IsCollectionWithSize;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 import java.util.Optional;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class MeasurementRepositoryTest extends IntegrationTestBase {
 
@@ -28,7 +27,6 @@ class MeasurementRepositoryTest extends IntegrationTestBase {
         List<Measurement> measurements = measurementRepository.findByValueGreaterThan(21.0);
         assertFalse(measurements.isEmpty());
     }
-
 
 
 }

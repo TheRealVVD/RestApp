@@ -25,7 +25,6 @@ class SensorRepositoryTest extends IntegrationTestBase {
     }
 
 
-
     @Test
     void testFindById() {
         Optional<Sensor> sensor = sensorRepository.findById(1);

@@ -1,7 +1,5 @@
 package api.project.rest.dto;
 
-import api.project.rest.models.Sensor;
-
 import java.util.List;
 
 public class SensorsResponce {
@@ -19,4 +17,5 @@ public class SensorsResponce {
     public void setSensors(List<SensorDTO> sensors) {
         this.sensors = sensors;
     }
+
 }

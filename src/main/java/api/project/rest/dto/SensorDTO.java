@@ -13,6 +13,7 @@ import javax.validation.constraints.Size;
 @AllArgsConstructor
 @Builder
 public class SensorDTO {
+
     @NotEmpty(message = "Название не должно быть пустым!")
     @Size(min = 3, max = 30, message = "Название сенсора должно быть от 3 до 30 символов!")
     private String name;
@@ -24,4 +25,5 @@ public class SensorDTO {
     public void setName(String name) {
         this.name = name;
     }
+
 }

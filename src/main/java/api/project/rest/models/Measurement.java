@@ -1,25 +1,24 @@
 package api.project.rest.models;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
-
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 
-@Data
+@Getter
+@Setter
+@ToString
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "Measurement")
+@Table(name = "measurement")
 public class Measurement {
+
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -44,43 +43,15 @@ public class Measurement {
     @JoinColumn(name = "sensor", referencedColumnName = "name")
     private Sensor sensor;
 
-    public Integer getId() {
-        return id;
-    }
+    @Column(name = "type")
+    @Enumerated(value = EnumType.STRING)
+    private MeasurementType measurementType;
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+    public enum MeasurementType {
 
-    public Double getValue() {
-        return value;
-    }
+        POWER,
+        VOLTAGE,
+        TEMPERATURE
 
-    public void setValue(Double value) {
-        this.value = value;
-    }
-
-    public Boolean isRaining() {
-        return raining;
-    }
-
-    public void setRaining(Boolean raining) {
-        this.raining = raining;
-    }
-
-    public LocalDateTime getMeasurementDateTime() {
-        return measurementDateTime;
-    }
-
-    public void setMeasurementDateTime(LocalDateTime measurementDateTime) {
-        this.measurementDateTime = measurementDateTime;
-    }
-
-    public Sensor getSensor() {
-        return sensor;
-    }
-
-    public void setSensor(Sensor sensor) {
-        this.sensor = sensor;
     }
 }
