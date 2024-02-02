@@ -1,12 +1,12 @@
 package api.project.rest.dto;
 
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.NotEmpty;
 
-import javax.validation.constraints.Size;
 
 @Data
 @NoArgsConstructor

@@ -6,6 +6,7 @@ import api.project.rest.models.Sensor;
 import api.project.rest.services.SensorService;
 import api.project.rest.util.SensorNotFoundException;
 import api.project.rest.util.SensorValidator;
+import jakarta.validation.Valid;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -13,7 +14,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
 import java.util.stream.Collectors;
 
 import static api.project.rest.util.ErrorsUtil.returnErrorsToClient;

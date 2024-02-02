@@ -1,4 +1,4 @@
-image: maven:3-amazoncorretto-21
+image: maven:3-amazoncorretto-17
 
 stages:
   - build
@@ -7,7 +7,7 @@ stages:
 build:
   stage: build
   tags:
-    - docker-21
+    - docker-17
   script:
 #    Batch mode (-B, --batch-mode) is essential if you need to run Maven in a non-interactive,
 #  continuous integration environment. When running in non-interactive mode,
@@ -17,7 +17,7 @@ build:
 test:
   stage: test
   tags:
-    - docker-21
+    - docker-17
   script:
     - pwd
     - mvn test

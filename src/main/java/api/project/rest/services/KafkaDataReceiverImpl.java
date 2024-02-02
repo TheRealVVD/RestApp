@@ -6,11 +6,11 @@ import api.project.rest.repositories.KafkaDataReceiver;
 import api.project.rest.repositories.KafkaDataService;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import reactor.kafka.receiver.KafkaReceiver;
 
-import javax.annotation.PostConstruct;
 import java.time.LocalDateTime;
 
 @Service
