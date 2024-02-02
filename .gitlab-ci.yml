@@ -1,1 +1,1 @@
-image: maven:3.8.4-openjdk
+image: maven:3-openjdk-19
