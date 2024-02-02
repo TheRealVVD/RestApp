@@ -7,7 +7,7 @@ stages:
 build:
   stage: build
   tags:
-    - docker-17ac
+    - docker-396-17ac
   script:
 #    Batch mode (-B, --batch-mode) is essential if you need to run Maven in a non-interactive,
 #  continuous integration environment. When running in non-interactive mode,
@@ -18,7 +18,7 @@ build:
 test:
   stage: test
   tags:
-    - docker-17ac
+    - docker-396-17ac
   script:
     - pwd
     - mvn test
