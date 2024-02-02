@@ -14,7 +14,6 @@ build:
 #  Maven will never stop to accept input from the user. Instead, it will use sensible default values when it requires input.
     - "mvn install -B -X"
 
-
 test:
   stage: test
   tags:
