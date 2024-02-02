@@ -14,7 +14,7 @@ build:
 #    Batch mode (-B, --batch-mode) is essential if you need to run Maven in a non-interactive,
 #  continuous integration environment. When running in non-interactive mode,
 #  Maven will never stop to accept input from the user. Instead, it will use sensible default values when it requires input.
-    - "mvn install -B"
+    - mvn install -B
 
 test:
   stage: test
