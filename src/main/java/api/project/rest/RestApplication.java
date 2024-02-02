@@ -18,6 +18,8 @@ public class RestApplication {
         return new ModelMapper();
     }
 
+    //   docker run --name measure_postgres -e POSTGRES_PASSWORD=postgres -e POSTGRES_USER=postgres -e POSTGRES_DB=measure_rest_db -p 5432:5432 -d postgres:15.3
+
 
     //   bin/windows/zookeeper-server-start.bat config/zookeeper.properties
     //   bin/windows/kafka-server-start.bat config/server.properties
