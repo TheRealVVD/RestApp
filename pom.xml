@@ -40,6 +40,8 @@
         <hibernate-validator.version>8.0.1.Final</hibernate-validator.version>
         <lombok.version>1.18.30</lombok.version>
         <junit.jupiter.version>5.9.3</junit.jupiter.version>
+        <logback-classic.version>1.4.11</logback-classic.version>
+
     </properties>
 
 
@@ -171,6 +173,12 @@
             <groupId>org.liquibase</groupId>
             <artifactId>liquibase-core</artifactId>
             <version>${liquibase-core.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback-classic.version}</version>
         </dependency>
 
     </dependencies>
