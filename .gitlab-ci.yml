@@ -1,8 +1,8 @@
 image: openjdk-11-jdk-slim
 
-#default:
-#  tags:
-#    - shelllocal
+default:
+  tags:
+    - shelllocal
 
 
 stages:
