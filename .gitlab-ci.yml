@@ -22,4 +22,3 @@ test:
   script:
     - pwd
     - mvn test
-
