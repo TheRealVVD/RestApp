@@ -1,8 +1,8 @@
-image: openjdk-11-jdk-slim
+#image: openjdk-11-jdk-slim
 
 default:
   tags:
-    - shelllocal
+    - dockernew
 
 
 stages:
